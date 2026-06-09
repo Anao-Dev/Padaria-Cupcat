@@ -1,0 +1,16 @@
+.testimonial-card {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.testimonial-card figcaption {
+  color: var(--color-primary);
+  font-weight: 700;
+}

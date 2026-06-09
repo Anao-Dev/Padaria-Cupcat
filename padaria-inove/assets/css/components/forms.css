@@ -1,0 +1,80 @@
+.contact-section {
+  background: linear-gradient(180deg, rgba(168, 198, 134, 0.12), rgba(255, 243, 214, 0.72));
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.contact__copy,
+.contact-form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.contact-form {
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+}
+
+.form__field {
+  display: grid;
+  gap: 6px;
+}
+
+.form__field--trap {
+  position: absolute;
+  left: -9999px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(74, 44, 26, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 243, 214, 0.86);
+  color: var(--color-dark);
+  padding: 12px 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form__error {
+  min-height: 1.2em;
+  color: #8f1732;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form__status {
+  min-height: 1.4em;
+  font-weight: 700;
+}
+
+.form__privacy {
+  font-size: 0.9rem;
+}
+
+.toast {
+  position: fixed;
+  z-index: 250;
+  right: 20px;
+  bottom: 20px;
+  max-width: min(360px, calc(100% - 40px));
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--color-dark);
+  color: var(--color-base);
+  box-shadow: 0 18px 50px var(--color-shadow-strong);
+}

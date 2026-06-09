@@ -1,0 +1,65 @@
+body {
+  background: var(--color-base);
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+main,
+.footer,
+.site-header {
+  position: relative;
+}
+
+main {
+  z-index: 1;
+}
+
+.footer,
+.site-header {
+  z-index: 3;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 0.96;
+}
+
+h1 {
+  max-width: 980px;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-family: var(--font-accent);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1;
+}

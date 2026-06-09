@@ -1,0 +1,109 @@
+.button {
+  --magnet-x: 0px;
+  --magnet-y: 0px;
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.button:hover {
+  transform: translate3d(var(--magnet-x), calc(var(--magnet-y) - 2px), 0);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  transform: none;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--color-base);
+  box-shadow: 0 14px 34px rgba(196, 122, 50, 0.30);
+}
+
+.button--primary:hover {
+  background: var(--color-accent);
+}
+
+.button--ghost {
+  color: var(--color-base);
+  border-color: rgba(255, 243, 214, 0.7);
+  background: rgba(74, 44, 26, 0.28);
+}
+
+.button--dark {
+  background: var(--color-dark);
+  color: var(--color-base);
+}
+
+.button--small {
+  min-height: 42px;
+  padding: 10px 18px;
+  font-size: 0.92rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 240;
+  right: 20px;
+  bottom: 20px;
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px 12px 14px;
+  border-radius: 999px;
+  background: #1f7a4d;
+  color: #fff3d6;
+  box-shadow: 0 18px 48px rgba(31, 122, 77, 0.34), 0 8px 22px rgba(74, 44, 26, 0.18);
+  font-weight: 700;
+  line-height: 1;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.whatsapp-float:hover {
+  background: #17613d;
+  transform: translateY(-3px);
+  box-shadow: 0 22px 58px rgba(31, 122, 77, 0.42), 0 10px 26px rgba(74, 44, 26, 0.22);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 767px) {
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 56px;
+    min-height: 56px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .whatsapp-float span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,38 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.reveal:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.reveal:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.reveal:nth-child(4) {
+  transition-delay: 200ms;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
